@@ -14,7 +14,7 @@ import javax.annotation.Resource;
 import java.util.List;
 
 @RestController
-@Api(value = "用户信息接口")
+@Api(value = "用户信息接口", tags = "用户信息")
 public class UserController {
 
     @Resource
@@ -28,7 +28,7 @@ public class UserController {
     }
 
     @ApiOperation("测试")
-    @RequestMapping("/test")
+    @GetMapping("/test")
     public String test() {
         return "沉默王二又帅又丑";
     }

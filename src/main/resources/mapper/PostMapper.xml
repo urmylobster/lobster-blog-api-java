@@ -39,9 +39,15 @@
         <if test="postAuthor != null">post_author=#{postAuthor},</if>
         <if test="postContent != null">post_content=#{postContent},</if>
         post_title=#{postTitle}
-        where post_id=#{id}
+        where post_id=#{postId}
     </update>
-    <delete id="delete">
+    <update id="delete" parameterType="java.lang.Long">
+        update
+        posts
+        set  post_isdeleted= 1
+        where post_id=#{postId}
+    </update>
+    <delete id="deletePermanent" parameterType="java.lang.Long">
         delete from
             posts
         where

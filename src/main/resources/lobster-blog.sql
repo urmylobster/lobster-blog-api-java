@@ -1,4 +1,4 @@
-create database lobster_blog default charset utf8;
+create database lobster_blog default charset utf8mb4;
 
 use lobster_blog;
 create table `user` (
@@ -6,7 +6,7 @@ create table `user` (
                         `username` varchar(10) not null comment '用户名',
                         `password` varchar(10) not null comment '密码',
                         primary key(`id`)
-) engine = innodb default charset=utf8;
+) engine = innodb default charset=utf8mb4;
 
 INSERT INTO `user` (`id`, `username`, `password`)
 VALUES ('1', 'alex', ' 123456');

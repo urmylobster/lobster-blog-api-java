@@ -3,10 +3,12 @@ package com.lobster.tobebraverman.service.impl;
 import com.lobster.tobebraverman.dao.PostMapper;
 import com.lobster.tobebraverman.entity.Posts;
 import com.lobster.tobebraverman.service.PostService;
+import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
 import java.util.List;
 
+@Service
 public class PostServiceImpl implements PostService {
 
     @Resource
@@ -36,4 +38,7 @@ public class PostServiceImpl implements PostService {
     public void delete(Long id) {
         postMapper.delete(id);
     }
+
+    @Override
+    public void deletePermanent(Long id) { postMapper.deletePermanent(id);}
 }

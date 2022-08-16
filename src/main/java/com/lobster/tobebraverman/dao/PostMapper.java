@@ -10,4 +10,5 @@ public interface PostMapper {
     void insert(Posts post);
     void update(Posts post);
     void delete(Long id);
+    void deletePermanent(Long id);
 }

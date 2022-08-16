@@ -1,9 +1,9 @@
 package com.lobster.tobebraverman.controller;
 
 import com.lobster.tobebraverman.entity.User;
+import io.swagger.annotations.Api;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.ArrayList;
@@ -13,14 +13,15 @@ import java.util.Map;
 
 @RestController
 @RequestMapping("/json")
+@Api(tags = "hello")
 public class HelloController {
 
-    @RequestMapping("/user")
+    @GetMapping ("/user")
     public User getUser() {
         return new User(1, "vin", "123456");
     }
 
-    @RequestMapping("/list")
+    @GetMapping("/list")
     public List<User> getUserList() {
         List<User> userList = new ArrayList<>();
         User user1 = new User(2, "wanger", "123");
@@ -30,7 +31,7 @@ public class HelloController {
         return userList;
     }
 
-    @RequestMapping("/map")
+    @GetMapping("/map")
     public Map<String, Object> getMap() {
         Map<String, Object> map = new HashMap<>(3);
         User user = new User(5, "xiaomi", "1214");

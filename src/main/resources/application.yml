@@ -7,7 +7,7 @@ spring:
   datasource: # 数据库配置
     driver-class-name: com.mysql.cj.jdbc.Driver
     username: root
-    password: xxxx
+    password:
     url: jdbc:mysql://localhost/lobster_blog?useUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai&useSSL=false
     hikari:
       maximum-pool-size: 10 # 最大连接池数
