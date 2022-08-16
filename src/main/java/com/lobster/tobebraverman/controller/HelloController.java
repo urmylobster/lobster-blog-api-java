@@ -17,14 +17,14 @@ public class HelloController {
 
     @RequestMapping("/user")
     public User getUser() {
-        return new User(1L, "vin", "123456");
+        return new User(1, "vin", "123456");
     }
 
     @RequestMapping("/list")
     public List<User> getUserList() {
         List<User> userList = new ArrayList<>();
-        User user1 = new User(2L, "wanger", "123");
-        User user2 = new User(3L, "wuge", "456");
+        User user1 = new User(2, "wanger", "123");
+        User user2 = new User(3, "wuge", "456");
         userList.add(user1);
         userList.add(user2);
         return userList;
@@ -33,7 +33,7 @@ public class HelloController {
     @RequestMapping("/map")
     public Map<String, Object> getMap() {
         Map<String, Object> map = new HashMap<>(3);
-        User user = new User(5L, "xiaomi", "1214");
+        User user = new User(5, "xiaomi", "1214");
         map.put("author", user);
         map.put("blog", "http://example.com");
         map.put("csdn", "csdn");

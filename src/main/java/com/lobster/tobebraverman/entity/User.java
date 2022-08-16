@@ -1,21 +1,30 @@
 package com.lobster.tobebraverman.entity;
 
+import lombok.Builder;
+import lombok.Data;
+import lombok.experimental.Tolerate;
+
+@Data
+@Builder
 public class User {
-    private Long id;
+    private Integer id;
     private String username;
     private String password;
 
-    public User(Long id, String username, String password) {
+    @Tolerate
+    User() {}
+
+    public User(Integer id, String username, String password) {
         this.id = id;
         this.username = username;
         this.password = password;
     }
 
-    public Long getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 

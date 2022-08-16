@@ -5,12 +5,13 @@ import com.lobster.tobebraverman.entity.User;
 import java.util.List;
 
 public interface UserService {
-    User getUser(Long id);
+
+    User getUser(Integer id);
 
     List<User> getAll();
 
     User getUserByName(String name);
 
-    User getUser(Long id, String name);
+    User getUser(Integer id, String name);
 
 }

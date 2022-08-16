@@ -10,8 +10,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-
 import javax.annotation.Resource;
+import java.util.List;
 
 @RestController
 @Api(value = "用户信息接口")
@@ -22,16 +22,35 @@ public class UserController {
 
     @GetMapping("/getUser/{id}")
     @ApiOperation(value = "根据用户唯一标识获取用户信息")
-    public JsonResult<User> getUserInfo(@PathVariable @ApiParam(value = "用户唯一标识") Long id) {
-        User user = new User(8L, "Alex", "123456");
+    public JsonResult<User> getUserInfo(@PathVariable @ApiParam(value = "用户唯一标识") Integer id) {
+        User user = new User(8, "Alex", "123456");
         return new JsonResult<>(user);
     }
-
 
     @ApiOperation("测试")
     @RequestMapping("/test")
     public String test() {
         return "沉默王二又帅又丑";
+    }
+
+    @RequestMapping("/getUser/{id}")
+    public JsonResult<User> getUser(@PathVariable Integer id) {
+        return new JsonResult<>(userService.getUser(id));
+    }
+
+    @RequestMapping("/getUser/{id}/{name}")
+    public User getUser(@PathVariable Integer id, @PathVariable String name) {
+        return userService.getUser(id, name);
+    }
+
+    @RequestMapping("/getall")
+    public List<User> getAll() {
+        return userService.getAll();
+    }
+
+    @RequestMapping("/getUserByName/{name}")
+    public User getUserByName(@PathVariable String name) {
+        return userService.getUserByName(name);
     }
 
 }
