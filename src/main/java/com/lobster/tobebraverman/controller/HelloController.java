@@ -1,4 +1,4 @@
-package com.lobster.tobebraverman;
+package com.lobster.tobebraverman.controller;
 
 import com.lobster.tobebraverman.entity.User;
 import org.springframework.web.bind.annotation.GetMapping;
