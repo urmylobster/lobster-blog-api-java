@@ -20,35 +20,29 @@ public class UserController {
     @Resource
     private UserService userService;
 
-    @GetMapping("/getUser/{id}")
-    @ApiOperation(value = "根据用户唯一标识获取用户信息")
-    public JsonResult<User> getUserInfo(@PathVariable @ApiParam(value = "用户唯一标识") Integer id) {
-        User user = new User(8, "Alex", "123456");
-        return new JsonResult<>(user);
-    }
-
     @ApiOperation("测试")
     @GetMapping("/test")
     public String test() {
         return "沉默王二又帅又丑";
     }
 
-    @RequestMapping("/getUser/{id}")
-    public JsonResult<User> getUser(@PathVariable Integer id) {
+    @GetMapping("/getUser/{id}")
+    @ApiOperation(value = "根据用户唯一标识获取用户信息")
+    public JsonResult<User> getUser(@PathVariable @ApiParam(value = "用户唯一标识") Integer id) {
         return new JsonResult<>(userService.getUser(id));
     }
 
-    @RequestMapping("/getUser/{id}/{name}")
+    @GetMapping("/getUser/{id}/{name}")
     public User getUser(@PathVariable Integer id, @PathVariable String name) {
         return userService.getUser(id, name);
     }
 
-    @RequestMapping("/getall")
+    @GetMapping("/getall")
     public List<User> getAll() {
         return userService.getAll();
     }
 
-    @RequestMapping("/getUserByName/{name}")
+    @GetMapping("/getUserByName/{name}")
     public User getUserByName(@PathVariable String name) {
         return userService.getUserByName(name);
     }

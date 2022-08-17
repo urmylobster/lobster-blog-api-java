@@ -17,6 +17,7 @@ create table `posts` (
                         `post_author` varchar(10) not null comment '作者',
                         `post_content` longtext not null comment '内容',
                         `post_title` varchar(20) not null comment '标题',
+                        `post_isdeleted` int not null default 0 comment '删除标志',
                         primary key(`post_id`)
 ) engine = innodb default charset=utf8mb4;
 
