@@ -1,7 +1,7 @@
 # lobster-blog-api-java
 
 ## 🦞小龙虾的博客-后端API-Java版
-- 本项目为 [lobster-blog-vue3](https://github.com/imurlobster/lobster-blog-vue3)的后端API
+- 本项目为 [lobster-blog-vue3](https://github.com/imurlobster/lobster-blog-vue3) 的后端API
 - powered by SpringBoot2.7
 
 
