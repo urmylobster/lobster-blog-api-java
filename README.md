@@ -20,7 +20,9 @@
 
 src/main/resource/lobster-blog.sql
 
-3.修改application.yml 数据库连接信息
+3.修改配置文件的数据库连接信息
+
+src/main/resource/application.yml 
 
 4.启动项目
 
