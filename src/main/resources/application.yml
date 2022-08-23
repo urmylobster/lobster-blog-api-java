@@ -1,5 +1,5 @@
 server:
-  port: 9607
+  port: 8080
 spring:
   mvc: #整合swagger3
     path match:
@@ -15,7 +15,7 @@ spring:
 
 mybatis:
   # 指定别名设置的包为所有entity
-  type-aliases-package: com.itcodai.course10.entity
+  type-aliases-package: com.lobster.tobebraverman.entity
   configuration:
     map-underscore-to-camel-case: true # 驼峰命名规范
   mapper-locations: classpath:mapper/*.xml # mapper映射文件位置
