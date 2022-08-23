@@ -1,10 +1,32 @@
 # lobster-blog-api-java
-lobster blog backend api 
 
-powered by SpringBoot
+## 🦞小龙虾的博客-后端API-Java版
+- 本项目为 [lobster-blog-vue3](https://github.com/imurlobster/lobster-blog-vue3) 的后端API
+- powered by SpringBoot2.7
 
 
-## 项目启动问题
-maven 
-maven home path
-Bundled( Maven 3)
+##  项目功能
+- swagger
+- mybatis
+- to do more
+
+## 使用步骤
+
+1.克隆仓库
+
+`git clone https://github.com/imurlobster/lobster-blog-api-java.git`
+
+2.导入MySQL数据sql
+
+src/main/resource/lobster-blog.sql
+
+3.修改配置文件的数据库连接信息
+
+src/main/resource/application.yml 
+
+4.启动项目
+
+
+
+
+
