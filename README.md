@@ -20,12 +20,17 @@
 
 src/main/resource/lobster-blog.sql
 
-3.修改配置文件的数据库连接信息
+3.修改配置文件的端口号/数据库连接信息
 
 src/main/resource/application.yml 
 
 4.启动项目
 
+浏览器输入 http://localhost:8080/swagger-ui/index.html
+
+![](./api.png)
+
+点击即可测试接口
 
 
 
