@@ -35,7 +35,7 @@ public class PostController {
 
     @PostMapping("/insert")
     @ApiOperation("添加文章")
-    public JsonResult<Posts> insert(@Valid PostsParam postsParam) {
+    public JsonResult<Posts> insert(@Valid @RequestBody  PostsParam postsParam) {
         Posts posts = new Posts();
         posts.setPostTitle(postsParam.getPostTitle());
         posts.setPostAuthor(postsParam.getPostAuthor());

@@ -15,6 +15,10 @@ public class PostsParam implements Serializable {
     @ApiModelProperty(value = "post_id")
     private Long postsId;
 
+    @ApiModelProperty(value = "标题")
+    @NotBlank(message = "标题不能为空")
+    private String postTitle;
+
     @ApiModelProperty(value = "正文")
     @NotBlank(message = "文章内容不能为空")
     private String postContent;
@@ -23,9 +27,7 @@ public class PostsParam implements Serializable {
     @NotBlank(message = "作者不能为空")
     private String postAuthor;
 
-    @ApiModelProperty(value = "标题")
-    @NotBlank(message = "标题不能为空")
-    private String postTitle;
+
 
 
 }
