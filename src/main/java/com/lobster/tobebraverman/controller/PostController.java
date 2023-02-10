@@ -53,9 +53,9 @@ public class PostController {
 
     @PostMapping("/update")
     @ApiOperation("更新文章")
-    public JsonResult<Posts> update(@Valid PostsParam postsParam) {
+    public JsonResult<Posts> update(@Valid @RequestBody PostsParam postsParam) {
         Posts posts = new Posts();
-        posts.setPostId(postsParam.getPostsId());
+        posts.setPostId(postsParam.getPostId());
         posts.setPostTitle(postsParam.getPostTitle());
         posts.setPostAuthor(postsParam.getPostAuthor());
         posts.setPostContent(postsParam.getPostContent());

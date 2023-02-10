@@ -13,7 +13,7 @@ public class PostsParam implements Serializable {
     private static final long serialVersionUID = 1L;
 
     @ApiModelProperty(value = "post_id")
-    private Long postsId;
+    private Long postId;
 
     @ApiModelProperty(value = "标题")
     @NotBlank(message = "标题不能为空")
