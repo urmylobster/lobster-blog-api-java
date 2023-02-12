@@ -3,8 +3,8 @@ create database lobster_blog default charset utf8mb4;
 use lobster_blog;
 create table `user` (
                         `id` int not null auto_increment comment '用户编号',
-                        `username` varchar(10) not null comment '用户名',
-                        `password` varchar(10) not null comment '密码',
+                        `username` varchar(40) not null comment '用户名',
+                        `password` varchar(40) not null comment '密码',
                         primary key(`id`)
 ) engine = innodb default charset=utf8mb4;
 
@@ -14,9 +14,9 @@ VALUES ('1', 'alex', ' 123456');
 drop table if exists `posts`;
 create table `posts` (
                         `post_id` bigint not null auto_increment comment '文章编号',
-                        `post_author` varchar(10) not null comment '作者',
+                        `post_author` varchar(40) not null comment '作者',
                         `post_content` longtext not null comment '内容',
-                        `post_title` varchar(20) not null comment '标题',
+                        `post_title` varchar(40) not null comment '标题',
                         `post_isdeleted` int not null default 0 comment '删除标志',
                         primary key(`post_id`)
 ) engine = innodb default charset=utf8mb4;
