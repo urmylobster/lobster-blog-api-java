@@ -15,4 +15,5 @@ public class Posts {
     private String postAuthor;
     private String postTitle;
     private String postContent;
+    private String postDate;
 }

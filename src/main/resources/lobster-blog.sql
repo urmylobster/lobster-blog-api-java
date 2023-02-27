@@ -77,3 +77,7 @@ UNLOCK TABLES;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
 -- Dump completed on 2023-02-14 17:48:06
+
+
+#alter table `posts` change create_date post_date timestamp not null default current_timestamp()
+#alter table `posts` add column post_date timestamp not null default current_timestamp()

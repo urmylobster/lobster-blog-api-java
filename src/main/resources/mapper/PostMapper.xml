@@ -6,10 +6,12 @@
         <result column="post_author" property="postAuthor"/>
         <result column="post_content" property="postContent"/>
         <result column="post_title" property="postTitle"/>
+        <result column="create_date" property="postDate"/>
     </resultMap>
 
     <sql id="Base_Column_List">
-        post_id, post_author, post_content, post_title
+        post_id, post_author, post_content, post_title,
+        DATE(post_date) as create_date
     </sql>
 
     <select id="getAll" resultMap="BaseResultMap">
