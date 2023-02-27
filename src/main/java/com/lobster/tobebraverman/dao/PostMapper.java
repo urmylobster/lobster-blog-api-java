@@ -11,4 +11,5 @@ public interface PostMapper {
     void update(Posts post);
     void delete(Long id);
     void deletePermanent(Long id);
+    List<Posts> searchByTitle(String title);
 }

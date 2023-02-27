@@ -41,4 +41,9 @@ public class PostServiceImpl implements PostService {
 
     @Override
     public void deletePermanent(Long id) { postMapper.deletePermanent(id);}
+
+    @Override
+    public List<Posts> searchByTitle(String title) {
+        return postMapper.searchByTitle(title);
+    }
 }

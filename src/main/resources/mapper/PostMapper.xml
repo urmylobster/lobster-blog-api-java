@@ -55,4 +55,8 @@
         where
             post_id=#{id}
     </delete>
+    <select id="searchByTitle" resultMap="BaseResultMap">
+        SELECT <include refid="Base_Column_List" /> FROM posts
+        WHERE post_title LIKE CONCAT('%', #{title}, '%')
+    </select>
 </mapper>

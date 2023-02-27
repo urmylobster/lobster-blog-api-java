@@ -62,4 +62,10 @@ public class PostController {
         postService.update(posts);
         return new JsonResult<>(posts);
     }
+
+    @GetMapping("/search")
+    @ApiOperation("搜索文章")
+    public JsonResult<List<Posts>> searchPostsByTitle(@RequestParam("title") String title) {
+        return new JsonResult<>(postService.searchByTitle(title));
+    }
 }
