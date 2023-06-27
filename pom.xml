@@ -10,7 +10,7 @@
     </parent>
     <groupId>com.lobster</groupId>
     <artifactId>lobster-blog-api-java</artifactId>
-    <version>1.0.1-SNAPSHOT</version>
+    <version>1.0.2-SNAPSHOT</version>
     <name>lobster-blog-api-java</name>
     <description>lobster-blog-api-java</description>
     <properties>
